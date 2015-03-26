@@ -10,7 +10,7 @@ import UIKit
 
 class StatementsTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource  {
     
-    var statements:[String] = ["If","For","While","Switch", "Create variable", "Create a simple array"]
+    //var statements:[String] = ["If","For","While","Switch", "Create variable", "Create a simple array"]
     
     var highlightedRows:[Bool]!
     
@@ -24,44 +24,42 @@ class StatementsTableViewController: UITableViewController, UITableViewDelegate,
     
     var languages:[Language]!
     
+    var statementsArray:[Statement] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.languageTitle.title = self.selectedLanguage
        
-        self.highlightedRows = [Bool](count:self.statements.count, repeatedValue:false)
+ 
         
         self.languages = languageObject.languages
         
+        var language = self.languageObject.findLanguageByName(self.selectedLanguage!)
+        
+        self.statementsArray = language!.statementsArray!
+        
+        self.highlightedRows = [Bool](count:self.statementsArray.count, repeatedValue:false)
+    
     }
     
-//    func returnLanguageCode(language1:String)->Int{
-//        var k = 0
-//        while true {
-//        if (language1 == languages[k]){
-//        return k
-//        }
-//        k++
-//    
-//        }
-//    }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Name") as UITableViewCell
         
-        cell.textLabel?.text = self.statements[indexPath.row]
+        cell.textLabel?.text = self.statementsArray[indexPath.row].name
         
         if (self.highlightedRows[indexPath.row] == true){
             cell.textLabel?.text =  nil
             
             var language = self.languageObject.findLanguageByName(self.selectedLanguage!)
             
-            var numberStatements = language?.statementsArray!.count
+            var numberStatements:Int = (language?.statementsArray!.count)! - 1
             
             //Percorre todos os Statements
-            for i in 0...numberStatements!
+            for i in 0...numberStatements
             {
                 var statement = language!.statementsArray![i] as Statement
                 
@@ -79,7 +77,10 @@ class StatementsTableViewController: UITableViewController, UITableViewDelegate,
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.statements.count
+        
+        
+        return self.statementsArray.count
+        
     }
     
 

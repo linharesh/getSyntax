@@ -12,19 +12,25 @@ import Foundation
 class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     
     
-    var languageObject = Languages()
+    var languageObject:Languages?
     
-    var languages:[Language]!
+    var languagesNames:[String]!
     
     var selectedLanguage:String!
-    
+
     var filteredLanguages = [String]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.languages = languageObject.languages
+        
+        self.languageObject = Languages()
+        
+        self.languagesNames = self.languageObject?.getLanguagesNames()
+        
     }
+    
+    
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
         self.filterContentForSearchText(searchString)
@@ -39,7 +45,7 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
     func filterContentForSearchText(searchText: String) {
         // Filter the array using the filter method
 
-            self.filteredLanguages = self.languages.filter{ ($0 as NSString).localizedCaseInsensitiveContainsString("\(searchText)") }
+       self.filteredLanguages = self.languagesNames.filter{ ($0 as NSString).localizedCaseInsensitiveContainsString("\(searchText)") }
         
 
     }
@@ -55,7 +61,7 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
         if tableView == self.searchDisplayController!.searchResultsTableView {
             language = filteredLanguages[indexPath.row]
         } else {
-            language = languages[indexPath.row]
+            language = languagesNames[indexPath.row]
         }
         
         
@@ -83,7 +89,7 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
         if tableView == self.searchDisplayController!.searchResultsTableView {
              self.selectedLanguage = self.filteredLanguages[indexPath.row]
         } else {
-             self.selectedLanguage = self.languages[indexPath.row]
+             self.selectedLanguage = self.languagesNames[indexPath.row]
         }
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -97,7 +103,7 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
         if tableView == self.searchDisplayController!.searchResultsTableView {
             return self.filteredLanguages.count
         } else {
-            return self.languages.count
+           return self.languagesNames.count
         }
     }
     

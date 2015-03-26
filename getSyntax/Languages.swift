@@ -13,32 +13,39 @@ class Languages {
 //    var languages:[String] = ["Objective-C","Swift","Java","Delphi","C++","JavaScript", "Scala","Python"]
     
     
-    var languages:[Language]!
-
+    var languages:[Language]! = []
+    
     //Construtor
     init(){
         
+        
+        //Objective-C
         var stIF = Statement(name: "If", image: "Objective-C-If")
         var stFOR = Statement(name: "For", image: "Objective-C-For")
-        
         var statements:[Statement] = [stIF, stFOR]
-        
-        
         var lang:Language = Language(name: "Objective-C", statementArray: statements)
-        
-        self.languages?.append(lang)
-        
+        self.languages.append(lang)
         
         
+        //Swift
         stIF = Statement(name: "If", image: "Swift-If")
         stFOR = Statement(name: "For", image: "Swift-For")
-        
         statements = [stIF, stFOR]
-        
-        
         lang = Language(name: "Swift", statementArray: statements)
+        self.languages.append(lang)
         
-        self.languages?.append(lang)
+        
+        //Java
+        stIF = Statement(name: "If", image: "Java-If")
+        stFOR = Statement(name: "For", image: "Java-For")
+        statements = [stIF, stFOR]
+        lang = Language(name: "Java", statementArray: statements)
+        self.languages.append(lang)
+        
+        
+        
+        
+        
         
     }
     
@@ -52,6 +59,21 @@ class Languages {
         return nil
     }
     
+    
+    
+    func getLanguagesNames() -> [String]?{
+    
+        var languagesNames:[String] = []
+        var i = 0
+        var limit = self.languages.count - 1
+        
+        for i in 0...limit{
+        languagesNames += [self.languages[i].name]
+        }
+        
+    
+    return languagesNames
+    }
     
 }
 

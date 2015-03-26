@@ -9,7 +9,7 @@
 import Foundation
 
 class Language{
-    var name:String?
+    var name:String!
     var statementsArray:[Statement]?
     
     init(name:String, statementArray:[Statement]?){
