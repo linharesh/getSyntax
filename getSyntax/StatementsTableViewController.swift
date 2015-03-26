@@ -56,16 +56,16 @@ class StatementsTableViewController: UITableViewController, UITableViewDelegate,
             
             var language = self.languageObject.findLanguageByName(self.selectedLanguage!)
             
-            var numberStatements:Int = (language?.statementsArray!.count)! - 1
+           // var numberStatements:Int = (language?.statementsArray!.count)! - 1
             
             //Percorre todos os Statements
-            for i in 0...numberStatements
-            {
-                var statement = language!.statementsArray![i] as Statement
+           // for i in 0...numberStatements
+           // {
+                var statement = language!.statementsArray![indexPath.row] as Statement
                 
                 cell.backgroundView = UIImageView(image: UIImage (named: statement.image!))
             
-            }
+           // }
         
             
         }else {

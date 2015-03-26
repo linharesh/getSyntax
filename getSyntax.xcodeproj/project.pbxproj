@@ -81,8 +81,8 @@
 		B0A21B1A1AC2EF2A0069219D /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				B0D4ED051AB1F3F4009CAA77 /* StatementsTableViewController.swift */,
 				B0D4ED031AB1F3A5009CAA77 /* IndexTableViewController.swift */,
+				B0D4ED051AB1F3F4009CAA77 /* StatementsTableViewController.swift */,
 				B0D4ECE51AB1F2C5009CAA77 /* ViewController.swift */,
 			);
 			name = controller;
