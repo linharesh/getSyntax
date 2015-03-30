@@ -11,10 +11,19 @@ import Foundation
 class Statement{
     var name:String!
     var image:String?
+    var description:String?
     
+    //Construtor sem o campo Description
     init(name:String, image:String){
         self.name = name
         self.image = image
+    }
+    
+    //Construtor com o campo Description
+    init(name:String, image:String, description:String){
+        self.name = name
+        self.image = image
+        self.description = description
     }
     
     
