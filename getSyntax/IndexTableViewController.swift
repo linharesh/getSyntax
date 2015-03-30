@@ -61,9 +61,7 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
-        
-        self.selectedLanguage = self.tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
-        
+        //Se o search está ativado
         if tableView == self.searchDisplayController!.searchResultsTableView {
              self.selectedLanguage = self.filteredLanguages[indexPath.row]
         } else {
