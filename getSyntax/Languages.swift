@@ -97,12 +97,23 @@ class Languages {
         
         
         //C++
-        stIF = Statement(name: "If", image: "C++-If")
-        stFOR = Statement(name: "For", image: "C++-For")
-        stWHILE = Statement(name: "While", image: "C++-While")
-        stSWITCH = Statement(name:"Switch", image:"C++-Switch")
-        stVARIABLE = Statement(name:"Create variable", image:"C++-Create variable")
-        stARRAY = Statement(name:"Create a simple array", image:"C++-Create a simple array")
+        stIF = Statement(name: "If", image: "C++-If", description: "if (3 > 4) ;open curly brackets; c out ,minor then,minor then, 3 is greater than 4 ;semicolon;close curly brackets; else ;open curly brackets; c out ,minor then,minor then, 3 is not greater than 4 ;semicolon;close curly brackets; Logs ; 3 is not greater than 4")
+        
+        
+        stFOR = Statement(name: "For", image: "C++-For", description: " for ;open parenthesis; int i = 0 ;semicolon; i ;minor then; 3 ;semicolon; i++  ;close parenthesis;open brackets; c out ;minor then;minor then; i ;semicolon; close brackets ; logs 0;1;2")
+        
+        
+        
+        stWHILE = Statement(name: "While", image: "C++-While", description: "int ;i = 0;semicolon; while ;open parenthesis; i minor then 2 ;close parenthesis; open curly brackets ; c out ; minor then ; minor then ; i ; semicolon; i++ ;semicolon ; close curly brackets ; logs; 0 ; 1  ")
+        
+        
+        stSWITCH = Statement(name:"Switch", image:"C++-Switch", description : "switch ;open parenthesis; number ;close parenthesis; open curly brackets ; case 1; colon; c out; minor then; minor then; one ; semicolon ; break ; semicolon ; default ; colon ; c out; minor then ; minor then ; not one ; semicolon ; break ;semicolon; close curly brackets ;")
+        
+        
+        stVARIABLE = Statement(name:"Create variable", image:"C++-Create variable", description: " int d ;=; 3 ; f ;=; 5;semicolon; float z ;=; 22.1 ;semicolon;  char x ;=; x ; semicolon")
+        
+        stARRAY = Statement(name:"Create a simple array", image:"C++-Create a simple array", description: "int foo ;open brackets;close brackets ; = ; open curly brackets ; 16 , 2 , 77 , 40 , 12017 ;close curly brackets; semicolon ; string animals ;open brackets ; close brackets ; = ; open curly brackets ; cat, dog, ant, lizard; close curly brackets; semicolon;")
+        
         statements = [stIF, stFOR, stWHILE, stSWITCH, stVARIABLE, stARRAY]
         lang = Language(name: "C++", statementArray: statements)
         self.languages.append(lang)
