@@ -67,11 +67,13 @@ class StatementsTableViewController: UITableViewController, UITableViewDelegate,
             
            // }
         
+            cell.isAccessibilityElement = true
+            cell.accessibilityLabel = statement.description
             
         }else {
             cell.backgroundView = nil;
         }
-    
+
         return cell
     }
     
