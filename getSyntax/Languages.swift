@@ -61,24 +61,36 @@ class Languages {
         
         
         //Java
-        stIF = Statement(name: "If", image: "Java-If")
-        stFOR = Statement(name: "For", image: "Java-For")
-        stWHILE = Statement(name: "While", image: "Java-While")
-        stSWITCH = Statement(name:"Switch", image:"Java-Switch")
-        stVARIABLE = Statement(name:"Create variable", image:"Java-Create variable")
-        stARRAY = Statement(name:"Create a simple array", image:"Java-Create a simple array")
+        stIF = Statement(name: "If", image: "Java-If", description: "if ;open parenthesis; x greater than 20 close parenthesis; open curly bracket; system dot out dot print l n ; open parenthesis; quote; x is greater than 20 quote; close parenthesis; semicolon; close curly brackets; else; open curly brackets; System dot out dot print l n; open brackets; quote; x is not greater than 20; quote; close parenthesis; semicolon; close curly brackets")
+        
+        stFOR = Statement(name: "For", image: "Java-For", description: "for; open parenthesis; int i equals 1; semicolon; i is smaller than 5; semicolon; i++; close parenthesis; open curly brackets; system dot out dot print l n; open parenthesis; quote; Count is quote; + i; close parenthesis; semicolon; close curly brackets; this code prints Count is 1 Count is 2 Count is 3 Count is 4")
+        
+        stWHILE = Statement(name: "While", image: "Java-While", description: "int i = 1; semicolon; while; open parenthesis; i less than 4; close parenthesis; open curly brackets; system dot out dot print l n; quote; Count is; quote; + i; close parenthesis; semicolon; i++; semicolon; close curly brackets; this code prints Count is 1 Count is 2 Count is 3")
+        
+        stSWITCH = Statement(name:"Switch", image:"Java-Switch", description: "switch; open parenthesis; number; close parenthesis; open curly brackets; case 1; colon; System dot out dot print l n; open parenthesis; quote; one; quote; close parenthesis; semicolon; break; semicolon; default; colon; system dot out dot print l n; open parenthesis; quote; not one; quote; close parenthesis; semicolon; break; semicolon; close curly brackets;")
+        
+        stVARIABLE = Statement(name:"Create variable", image:"Java-Create variable", description: "int age = 20; semicolon; float price = 32.91; semicolon; String S =; open parenthesis; quote; Hello, getSyntax; quote; close parenthesis; semicolon; boolean getSyntaxIsGreat = true;semicolon;")
+        
+        stARRAY = Statement(name:"Create a simple array", image:"Java-Create a simple array", description: "String; open brackets; close brackets; Animals = new String; open brackets; 3; close brackets; semicolon; Animals; open brackets; 0; close brackets; = ;quote; Cat ;quote; semicolon; Animals; open brackets; 1 ; close brackets = ;quote; Dog; quote; semicolon; Animals; open brackets; 2; close brackets; = ;quote; Elephant; quote; semicolon;")
+        
         statements = [stIF, stFOR, stWHILE, stSWITCH, stVARIABLE, stARRAY]
         lang = Language(name: "Java", statementArray: statements)
         self.languages.append(lang)
         
         
         //Delphi
-        stIF = Statement(name: "If", image: "Delphi-If")
-        stFOR = Statement(name: "For", image: "Delphi-For")
-        stWHILE = Statement(name: "While", image: "Delphi-While")
-        stSWITCH = Statement(name:"Switch", image:"Delphi-Switch")
-        stVARIABLE = Statement(name:"Create variable", image:"Delphi-Create variable")
-        stARRAY = Statement(name:"Create a simple array", image:"Delphi-Create a simple array")
+        stIF = Statement(name: "If", image: "Delphi-If", description: "if; open parenthesis; 3 greater than 4; close parenthesis; then; write l n ;open parenthesis; 3 is greater than 4 ;quote; close parenthesis; semicolon; else; write l n; open parenthesis; 3 is not greater than 4; quote; close parenthesis; semicolon; code writes 3 is not greater than 4 ")
+        
+        stFOR = Statement(name: "For", image: "Delphi-For", description: "for j; colon; equals;  1; to ;2; do; begin;  write l n; open parenthesis; quote; Hello, getSyntax!; quote; close parenthesis; semicolon; end; semicolon; This code prints: Hello, getSyntax; Hello, getSyntax; ")
+        
+        stWHILE = Statement(name: "While", image: "Delphi-While", description: "x colon = 0; semicolon;  while x less than 2; do; begin; x ;colon; equals x + 1 ;semicolon; write l n; open parenthesis; x ; close parenthesis; semicolon; end;  this code will write 1; 2" )
+        
+        stSWITCH = Statement(name:"Switch", image:"Delphi-Switch", description: "case; open parenthesis; number; close parenthesis; of; colon; 1; colon; write l n; open parenthesis; quote; number is 1; quote; close parenthesis; semicolon; 2; colon; write l n; open parenthesis; quote; number is 2; quote; close parenthesis; semicolon; else write l n; open parenthesis; quote; number is unkown; quote; close parenthesis; semicolon; ")
+        
+        stVARIABLE = Statement(name:"Create variable", image:"Delphi-Create variable", description: "var  age ;colon; integer; semicolon; name;colon; string; semicolon; getSyntaxIsGreat; colon; boolean; semicolon;")
+        
+        stARRAY = Statement(name:"Create a simple array", image:"Delphi-Create a simple array", description: "type TDays = array; open brackets; 1 dot dot 7; close brackets; of string; semicolon; var Days : TDays = ;open parenthesis; quote; Monday; quote; comma, quote; Tue; quote; comma; quote; Wed; quote; comma; quote; Thu; quote; comma; quote; Fri; quote; comma; quote; Sat; quote; comma; quote; Sun; quote; close parenthesis; semicolon;")
+        
         statements = [stIF, stFOR, stWHILE, stSWITCH, stVARIABLE, stARRAY]
         lang = Language(name: "Delphi", statementArray: statements)
         self.languages.append(lang)
