@@ -18,7 +18,7 @@ class Languages {
         
         
         //Objective-C
-        var stIF = Statement(name: "If", image: "Objective-C-If", description: "if, open parenthesis, 3 is greater than 4, close parenthesis; open curly brackets, N S Log, open parenthesis, @, quote, 3 is greater than 4, quote, close parenthesis ; semicolon; curly brackets, else ; curly brackets, N S Log, open parenthesis, @, quote, 3 is not greater than 4, quote, close parenthesis ; semicolon; This code logs, 3 is not greater than 4.")
+        var stIF = Statement(name: "If", image: "Objective-C-If", description: "if, open parenthesis, 3 is greater than 4, close parenthesis; open curly brackets, N S Log, open parenthesis, @, quote, 3 is greater than 4, quote, close parenthesis ; semicolon; close curly brackets, else ; open curly brackets, N S Log, open parenthesis, @, quote, 3 is not greater than 4, quote, close parenthesis;  semicolon; close curly brackets. This code logs, 3 is not greater than 4.")
         
         var stFOR = Statement(name: "For", image: "Objective-C-For", description :"for ,open parenthesis, int ,i, equals, 0, semicolon; i is less than 3 ; semicolon; i++ ;close parenthesis; open curly brackets; N S log, open parenthesis, @, quote, value of % d backslash, n, comma, i, close parenthesis, semicolon; close curly brackets; This code logs; value of 0 ; value of 1 ; value of 2.")
         
@@ -61,7 +61,7 @@ class Languages {
         
         
         //Java
-        stIF = Statement(name: "If", image: "Java-If", description: "if ;open parenthesis; x greater than 20 close parenthesis; open curly bracket; system dot out dot print l n ; open parenthesis; quote; x is greater than 20 quote; close parenthesis; semicolon; close curly brackets; else; open curly brackets; System dot out dot print l n; open brackets; quote; x is not greater than 20; quote; close parenthesis; semicolon; close curly brackets")
+        stIF = Statement(name: "If", image: "Java-If", description: "if ;open parenthesis; x greater than 20, close parenthesis; open curly bracket; system dot out dot print l n ; open parenthesis; quote; x is greater than 20 quote; close parenthesis; semicolon; close curly brackets; else; open curly brackets; System dot out dot print l n; open brackets; quote; x is not greater than 20; quote; close parenthesis; semicolon; close curly brackets")
         
         stFOR = Statement(name: "For", image: "Java-For", description: "for; open parenthesis; int i equals 1; semicolon; i is smaller than 5; semicolon; i++; close parenthesis; open curly brackets; system dot out dot print l n; open parenthesis; quote; Count is quote; + i; close parenthesis; semicolon; close curly brackets; this code prints Count is 1 Count is 2 Count is 3 Count is 4.")
         
@@ -113,7 +113,7 @@ class Languages {
         
         stVARIABLE = Statement(name:"Create variable", image:"C++-Create variable", description: " int d ;=; 3, comma, f ;=; 5;semicolon; float z ;=; 22.1 ;semicolon;  char x ;=; apostrophe, x ; apostrophe, semicolon")
         
-        stARRAY = Statement(name:"Create a simple array", image:"C++-Create a simple array", description: "int foo ;open brackets;close brackets ; = ; open curly brackets ; 16 ,comma,  2 , comma, 77, comma, 40, comma, 12017 ;close curly brackets; semicolon ; string animals ;open brackets ; close brackets ; = ; open curly brackets ; quote, cat,quote, comma, quote, dog, quote, comma, quote, ant, quote, comma, quote, lizard, quote; close curly brackets; semicolon;")
+        stARRAY = Statement(name:"Create a simple array", image:"C++-Create a simple array", description: "int foo ;open brackets;close brackets ; = ; open curly brackets ; 16 ,comma,  2 , comma, 77, comma, 40, comma, 12017 ;close curly brackets; semicolon; string animals; open brackets; close brackets; =; open curly brackets ; quote, cat,quote, comma, quote, dog, quote, comma, quote, ant, quote, comma, quote, lizard, quote; close curly brackets; semicolon;")
        
     
 
