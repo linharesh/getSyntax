@@ -9,7 +9,7 @@
 import Foundation
 
 class Statement{
-    var name:String!
+    var name:String?
     var image:String?
     var description:String?
     
