@@ -42,7 +42,11 @@ class StatementsTableViewController: UITableViewController, UITableViewDelegate,
         
         self.highlightedRows = [Bool](count:self.statementsArray.count, repeatedValue:false)
     
-    }
+    tableView.backgroundColor = UIColor.whiteColor()
+        
+    
+    
+        }
     
     
     
@@ -56,16 +60,11 @@ class StatementsTableViewController: UITableViewController, UITableViewDelegate,
             
             var language = self.languageObject.findLanguageByName(self.selectedLanguage!)
             
-           // var numberStatements:Int = (language?.statementsArray!.count)! - 1
-            
-            //Percorre todos os Statements
-           // for i in 0...numberStatements
-           // {
-                var statement = language!.statementsArray![indexPath.row] as Statement
+                           var statement = language!.statementsArray![indexPath.row] as Statement
                 
                 cell.backgroundView = UIImageView(image: UIImage (named: statement.image!))
             
-           // }
+           
         
             cell.isAccessibilityElement = true
             cell.accessibilityLabel = statement.description
@@ -74,6 +73,10 @@ class StatementsTableViewController: UITableViewController, UITableViewDelegate,
             cell.backgroundView = nil;
         }
 
+        cell.backgroundColor = UIColor.clearColor()
+        cell.textLabel?.font = UIFont(name: "Verdana", size: 15)
+        cell.textLabel?.textColor = UIColor(red: 84.0/255.0, green: 84.0/255.0, blue: 84.0/255.0, alpha: 1.0)
+        
         return cell
     }
     
@@ -104,7 +107,7 @@ class StatementsTableViewController: UITableViewController, UITableViewDelegate,
         if (self.highlightedRows[indexPath.row]){
         return 160
         } else {
-        return 44
+        return 48
         }
 
     }

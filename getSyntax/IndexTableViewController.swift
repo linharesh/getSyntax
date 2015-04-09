@@ -28,6 +28,10 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
         
         self.languagesNames = self.languageObject?.getLanguagesNames()
         
+        tableView.backgroundColor = UIColor.whiteColor()
+    
+        
+    
     }
     
     
@@ -49,6 +53,11 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
         cell.imageView?.image = UIImage(named: language)
         
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
+        cell.backgroundColor = UIColor.clearColor()
+        cell.textLabel?.font = UIFont(name: "Verdana", size: 15)
+        cell.textLabel?.textColor = UIColor(red: 84.0/255.0, green: 84.0/255.0, blue: 84.0/255.0, alpha: 1.0)
+        
         
         return cell
         
