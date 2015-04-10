@@ -136,6 +136,7 @@ class Languages {
         return nil
     }
     
+
     
     /*Returns an array of Strings with all names of the registred Languages*/
     func getLanguagesNames() -> [String]?{

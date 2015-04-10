@@ -14,6 +14,8 @@
 		B07972CC1AD446B0004A5E64 /* getSyntax Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B07972CB1AD446B0004A5E64 /* getSyntax Icon.png */; };
 		B0A21B1D1AC2EFBD0069219D /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A21B1C1AC2EFBD0069219D /* Language.swift */; };
 		B0A21B1F1AC2F02B0069219D /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A21B1E1AC2F02B0069219D /* Statement.swift */; };
+		B0C8F2B71AD6DE6D00D8BE17 /* CompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C8F2B61AD6DE6D00D8BE17 /* CompareViewController.swift */; };
+		B0C8F2B91AD6E01500D8BE17 /* ShowCompareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C8F2B81AD6E01500D8BE17 /* ShowCompareViewController.swift */; };
 		B0D4ECE41AB1F2C5009CAA77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D4ECE31AB1F2C5009CAA77 /* AppDelegate.swift */; };
 		B0D4ECE91AB1F2C5009CAA77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D4ECE71AB1F2C5009CAA77 /* Main.storyboard */; };
 		B0D4ECEE1AB1F2C5009CAA77 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0D4ECEC1AB1F2C5009CAA77 /* LaunchScreen.xib */; };
@@ -40,6 +42,8 @@
 		B07972CB1AD446B0004A5E64 /* getSyntax Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "getSyntax Icon.png"; sourceTree = "<group>"; };
 		B0A21B1C1AC2EFBD0069219D /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		B0A21B1E1AC2F02B0069219D /* Statement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
+		B0C8F2B61AD6DE6D00D8BE17 /* CompareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareViewController.swift; sourceTree = "<group>"; };
+		B0C8F2B81AD6E01500D8BE17 /* ShowCompareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCompareViewController.swift; sourceTree = "<group>"; };
 		B0D4ECDE1AB1F2C5009CAA77 /* getSyntax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = getSyntax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D4ECE21AB1F2C5009CAA77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0D4ECE31AB1F2C5009CAA77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				B0D4ED031AB1F3A5009CAA77 /* IndexTableViewController.swift */,
+				B0C8F2B61AD6DE6D00D8BE17 /* CompareViewController.swift */,
+				B0C8F2B81AD6E01500D8BE17 /* ShowCompareViewController.swift */,
 				B0D4ED051AB1F3F4009CAA77 /* StatementsTableViewController.swift */,
 			);
 			name = controller;
@@ -262,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A21B1F1AC2F02B0069219D /* Statement.swift in Sources */,
+				B0C8F2B91AD6E01500D8BE17 /* ShowCompareViewController.swift in Sources */,
 				B0D4ED061AB1F3F4009CAA77 /* StatementsTableViewController.swift in Sources */,
+				B0C8F2B71AD6DE6D00D8BE17 /* CompareViewController.swift in Sources */,
 				B0D4ECE41AB1F2C5009CAA77 /* AppDelegate.swift in Sources */,
 				B0A21B1D1AC2EFBD0069219D /* Language.swift in Sources */,
 				B0D4ED041AB1F3A5009CAA77 /* IndexTableViewController.swift in Sources */,

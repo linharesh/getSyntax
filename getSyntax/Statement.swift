@@ -25,6 +25,7 @@ class Statement{
         self.image = image
         self.description = description
     }
+
     
     
 }

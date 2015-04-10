@@ -1,9 +1,173 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dQV-aM-ydf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CVb-qH-FL4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
+        <!--Compare-->
+        <scene sceneID="8kG-YQ-me2">
+            <objects>
+                <navigationController id="lH5-wm-aax" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Compare" image="file-two-7.png" id="J3T-NV-T06"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pXQ-xG-6Rw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GTP-7H-6M4" kind="relationship" relationship="rootViewController" id="TUa-BO-hP5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TyH-Tm-tQb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133.5" y="-690.75"/>
+        </scene>
+        <!--getSyntax-->
+        <scene sceneID="N1V-qf-QF9">
+            <objects>
+                <viewController id="GTP-7H-6M4" customClass="CompareViewController" customModule="getSyntax" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tGj-ut-D6y"/>
+                        <viewControllerLayoutGuide type="bottom" id="B88-c3-Ykr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oO9-J4-lp9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HNz-tg-Cny">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="5" y="57" width="144" height="162"/>
+                                </variation>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfD-IQ-wkH">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="166" y="57" width="140" height="162"/>
+                                </variation>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noi-SZ-45R">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Compare">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="109" y="385" width="108" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="compareButton:" destination="GTP-7H-6M4" eventType="touchUpInside" id="LKh-Pn-XWh"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHk-x9-BGv">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="32" y="213" width="261" height="162"/>
+                                </variation>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90123895202020199" green="0.90123895202020199" blue="0.90123895202020199" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="HNz-tg-Cny"/>
+                                <exclude reference="qfD-IQ-wkH"/>
+                                <exclude reference="noi-SZ-45R"/>
+                                <exclude reference="nHk-x9-BGv"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="HNz-tg-Cny"/>
+                                <include reference="qfD-IQ-wkH"/>
+                                <include reference="noi-SZ-45R"/>
+                                <include reference="nHk-x9-BGv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Compare" image="file-two-7.png" id="59D-JR-f9S"/>
+                    <navigationItem key="navigationItem" title="getSyntax" id="Zw2-PC-b8x"/>
+                    <connections>
+                        <outlet property="firstLanguage" destination="HNz-tg-Cny" id="l4V-EF-cXo"/>
+                        <outlet property="secondLanguage" destination="qfD-IQ-wkH" id="8ur-tg-Q3D"/>
+                        <outlet property="statementPicker" destination="nHk-x9-BGv" id="hll-Fz-a03"/>
+                        <segue destination="g61-4W-ICl" kind="show" identifier="compareSegue" id="dr1-TV-t9J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLq-4a-mLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="-690.75"/>
+        </scene>
+        <!--Show Compare View Controller-->
+        <scene sceneID="Osq-eW-HSu">
+            <objects>
+                <viewController id="g61-4W-ICl" customClass="ShowCompareViewController" customModule="getSyntax" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jft-5Z-xjE"/>
+                        <viewControllerLayoutGuide type="bottom" id="YeK-pO-FTp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WsY-8A-cKo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FbF-C6-yl4">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="6" y="111" width="315" height="140"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-80-o0A">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="6" y="301" width="315" height="140"/>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="First Language Name" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lns-aB-2jN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="43" y="73" width="240" height="36"/>
+                                </variation>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Second Language Name" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bKx-La-RIz">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="43" y="259" width="240" height="34"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="FbF-C6-yl4"/>
+                                <exclude reference="B4b-80-o0A"/>
+                                <exclude reference="Lns-aB-2jN"/>
+                                <exclude reference="bKx-La-RIz"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="FbF-C6-yl4"/>
+                                <include reference="B4b-80-o0A"/>
+                                <include reference="Lns-aB-2jN"/>
+                                <include reference="bKx-La-RIz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="firstImage" destination="FbF-C6-yl4" id="GSl-Wg-rv5"/>
+                        <outlet property="firstTextView" destination="Lns-aB-2jN" id="5Al-yV-Gh3"/>
+                        <outlet property="secondImage" destination="B4b-80-o0A" id="sza-OL-hbr"/>
+                        <outlet property="secondTextView" destination="bKx-La-RIz" id="EmK-iz-F0y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IaT-Sb-CXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1447.5" y="-690.75"/>
+        </scene>
         <!--getSyntax-->
         <scene sceneID="cF8-Yq-SnY">
             <objects>
@@ -49,7 +213,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1264.5" y="720.75"/>
+            <point key="canvasLocation" x="706.5" y="398.25"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="y7w-RK-RVQ">
@@ -79,7 +243,26 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grG-r5-VTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2151" y="720.75"/>
+            <point key="canvasLocation" x="1593" y="398.25"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hnb-fp-uVD">
+            <objects>
+                <tabBarController id="CVb-qH-FL4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="1YC-Va-vyj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dQV-aM-ydf" kind="relationship" relationship="viewControllers" id="26A-02-gcu"/>
+                        <segue destination="lH5-wm-aax" kind="relationship" relationship="viewControllers" id="Wdz-pK-prx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rwW-Qv-5C6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1504.5" y="-316.5"/>
         </scene>
         <!--All Languages-->
         <scene sceneID="eJn-Qz-sUP">
@@ -99,10 +282,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PkD-KU-rCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282" y="720.75"/>
+            <point key="canvasLocation" x="-519" y="398.25"/>
         </scene>
     </scenes>
     <resources>
         <image name="allLanguages.png" width="30" height="30"/>
+        <image name="file-two-7.png" width="30" height="30"/>
     </resources>
 </document>
