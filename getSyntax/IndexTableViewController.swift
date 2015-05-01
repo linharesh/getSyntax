@@ -37,7 +37,7 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Icon_Name") as UITableViewCell
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Icon_Name") as! UITableViewCell
         
         
         
@@ -101,7 +101,7 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
         if (segue.identifier == "Segue1") {
             // pass data to next view
             
-            let viewController:StatementsTableViewController = segue.destinationViewController as StatementsTableViewController
+            let viewController:StatementsTableViewController = segue.destinationViewController as! StatementsTableViewController
             viewController.selectedLanguage = self.selectedLanguage
         }
         

@@ -51,7 +51,7 @@ class StatementsTableViewController: UITableViewController, UITableViewDelegate,
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Name") as UITableViewCell
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Name") as! UITableViewCell
         
         cell.textLabel?.text = self.statementsArray[indexPath.row].name
         

@@ -122,6 +122,111 @@ class Languages {
         self.languages.append(lang)
         
         
+        //Csharp
+        
+        stIF = Statement(name: "If", image: "Csharp-If", description: "int a, equals, 100, semicolon, if, open parenthesis, a, is less than, 20, close parenthesis, open curly brackets, console dot writeLine, open parenthesis, open quote, a, is less than 20, close quote, close parenthesis, semicolon, close curly brackets, console dot writeLine, open parenthesis, ope quote, value of a, is, colon, open curly brackets, 0, close curly brackets, close quote, comma, a, close parenthesis, semicolon, console dot readLine, open parenthesis, close parenthesis, semicolon.")
+        
+        
+        stFOR = Statement(name: "For", image: "Csharp-For", description: "for, open parenthesis, int a, equals, 10, semicolon, a, is less than, 20, semicolon, a, equals, a, plus one, close parenthesis, semicolon, close curly brackets, console dot readLine, open parenthesis, close parenthesis, semicolon")
+        
+        
+        
+        stWHILE = Statement(name: "While", image: "Csharp-While", description: "Int a, equals, ten, semicolon, while, open parenthesis, a, is less than, 20, close parenthesis, open curly brackets, console dot writeLine, open parenthesis, open quote, value of a, colon, open curly brackets, 0, close curly brackets, close quote, comma, a, close parenthesis, semicolon, a, plus plus, semicolon, close curly brackets, console dot readLine, open parenthesis, close parenthesis, semicolon.")
+        
+        
+        stSWITCH = Statement(name:"Switch", image:"Csharp-Switch", description : "int number, equals, 1, semicolon, switch, open parenthesis, number, close parenthesis, open curly brackets, case 0, colon, console dot writeLine, open parenthesis, open quote, the number is zero, close parenthesis, semicolon, break, semicolon, case 1, colon, console dot writeLine, open parenthesis, open quote, the number is one, close quote, close parenthesis, semicolon, close curly brackets.")
+        
+        
+        stVARIABLE = Statement(name:"Create variable", image:"Csharp-Create Variable", description: " Int d, equals, 3,comma, f, equals, 5, semicolon, byte z, equals, 22, semicolon, double pi, equals, 3, dot, 1,4,1,5,9, semicolon, char x, equals, open single quote, x, close single quote, semicolon. String, name, equals, open quote, john, close quote, semicolon.")
+        
+        stARRAY = Statement(name:"Create a simple array", image:"Csharp-Create A Simple Array", description: "int, open brackets, close brackets, marks, equals, open curly brackets, 99, comma, 98, comma, 92, comma, 95, close curly brackets, semicolon. int, open brackets, close brackets, marks, equals, new int, open brackets, 4, close brackets, open curly brackets, 99, comma, 98, comma, 92, comma, 95, close curly brackets, semicolon. String, open brackets, close brackets, names, equals, open curly brackets, open quote, Paul, close quote, comma, open quote, Lisa, close quote, comma, open quote, Simon, close quote, close curly brackets, semicolon.")
+        
+        
+        
+        statements = [stIF, stFOR, stWHILE, stSWITCH, stVARIABLE, stARRAY]
+        lang = Language(name: "C#", statementArray: statements)
+        self.languages.append(lang)
+        
+        
+        //JavaScript
+        
+        stIF = Statement(name: "If", image: "JavaScript-If", description: "if; open parenthesis; hour less than 18; close parenthesis; open curly brackets; greeting equals; open quotes; Good day; close quotes; semicolon; close curly brackets; else; open curly brackets; greeting equals; open quotes; Good evening; close quotes; semicolon; close curly brackets.")
+        
+        
+        stFOR = Statement(name: "For", image: "JavaScript-For", description: "or; open parenthesis; i equals 0; semicolon; i less than 5; semicolon; i plus plus; close parenthesis; open curly brackets; text plus equal; open quotes; the number is; close quotes; plus i plus; open quotes; less than; br; larger than; close quotes; semicolon.")
+        
+        
+        
+        stWHILE = Statement(name: "While", image: "JavaScript-While", description: "while; open parenthesis; i less than 10; close parenthesis; open curly brackets; text plus equal; open quotes; the number is; close quote; plus i; semicolon; i plus plus; semi colon; close curly brackets.")
+        
+        
+    var stOUTPUT = Statement(name:"Output", image:"JavaScript-Output", description: "three options:windows dot alert; open parenthesis; 5 plus 6 close parenthesis; semicolon; or, document dot alert; ; open parenthesis; 5 plus 6 close parenthesis; semicolon; or, console dot log; ; open parenthesis; 5 plus 6 close parenthesis; semicolon;")
+        
+        
+        stVARIABLE = Statement(name:"Create variable", image:"JavaScript-Create Variable", description: "var x equals 5; semicolon; var person equals open quotes; Erik; close quotes; semicolon.")
+        
+    var stFORIN = Statement(name:"For/In", image:"JavaScript-ForIn", description: "var person equals; open curly brackets; f name; colon; open quotes; John; close quotes; comma; l name, colon, open quote, Doe, close quote, close curly brackets; semicolon; var text equals; open quote; close quote; semicolon; for; open parenthesis; x in person; close parenthesis; open curly brackets; text; plus; equals; person; open brackets; x; close brackets; semicolon; close curly brackets.")
+        
+    var stDOWHILE = Statement(name:"Do/While", image:"JavaScript-DoWhile", description: "do; open curly brackets; text plus equals; open quotes; The number is; close quotes; plus i; semicolon; i plus plus; semicolon; close curly brackets; while; open parenthesis; i less than 10; close parenthesis; semicolon.")
+        
+        
+        
+        statements = [stIF, stFOR, stWHILE, stOUTPUT, stVARIABLE, stFORIN, stDOWHILE]
+        lang = Language(name: "JavaScript", statementArray: statements)
+        self.languages.append(lang)
+        
+        
+        //Perl
+        
+        stIF = Statement(name: "If", image: "Perl-If", description: "Dollar a, equals, one hundred semicolon, if, open parenthesis, dollar a, is less than, twenty, close parenthesis, open curly brackets, printf, open quote, a is less than, twenty backslash n, close quote, semicolon, close curly brackets, else, open curly brackets, printf, open quote, a is greater than, twenty backslash n, close quote, semicolon, close curly brackets.")
+        
+        
+        stFOR = Statement(name: "For", image: "Perl-For", description: "For, open parenthesis, dollar a, equals, ten semicolon, dollar a, is less than, twenty, semicolon, dollar a, equals, dollar a, plus, one, close parenthesis, open curly brackets, print, open quote, valeu of a, colon, dollar a, backslash n, close quote, semicolon, close curly brackets.")
+        
+        
+        
+        stWHILE = Statement(name: "While", image: "Perl-While", description: "Dollar a, equals, ten, semicolon, while, open parenthesis, dollar a, is less than, twenty, close parenthesis, open curly brackets, printf, open quote, valeu of a, colon, dollar a, backslash n, close quote, semicolon, dollar a, equals, dollar a, plus one, semicolon, close curly brackets. This code logs 0, 1.")
+        
+        
+        stSWITCH = Statement(name:"Switch", image:"Perl-Switch", description : "Use Switch, semicolon, dollar var, equals, ten semicolon. Switch open parenthesis dollar var close parenthesis, open curly brackets, case, ten,open curly brackets, print, open quote, number, ten backslash, n, close quote, close curly brackets, case, open quote, a, close quote, open curly brackets, print, open quote, string a close quote, close curly brackets, else, open curly brackets, print, open quote previous case not true, close quote, close curly brackets, close curly brackets.")
+        
+        
+        stVARIABLE = Statement(name:"Create variable", image:"Perl-Create Variable", description: "Dollar age, equals, 25, semicolon, dollar, name, equals, open quote, John, close quote, semicolon, dollar, salary, equals, 987, dot, 50, semicolon. Percent coins, equals, open parenthesis, open quote, quarter, close quote, comma, 25, comma, open quote, dime, close quote, comma, 10, comma, open quote, nickel, close quote, comma, 5, close parenthesis, semicolon.")
+        
+        stARRAY = Statement(name:"Create a simple array", image:"Perl-Create A Simple Array", description: "@ ages, equals, open parenthesis, 25, comma, 30, comma, 40, close parenthesis, semicolon, @ names, equals, open parenthesis, open quote, John, close quote, comma, open quote, Lisa, close quote, comma, open quote, Paul, close quote, close parenthesis, semicolon.")
+        
+        
+        
+        statements = [stIF, stFOR, stWHILE, stSWITCH, stVARIABLE, stARRAY]
+        lang = Language(name: "Perl", statementArray: statements)
+        self.languages.append(lang)
+
+        
+        //Python
+        
+        stIF = Statement(name: "If", image: "Python-If", description: "if, open parenthesis ; 3 is greater than 4 ; close parenthesis ; colon ; tab ; print ; open quotes ; 3 is greater than 4 ; close quotes ; else ; colon ; tab ; print ; open quotes ; 3 is not greater than 4 ; close quotes ; ; this code logs ; 3 is not greater than 4.")
+        
+        stFOR = Statement(name: "For", image: "Python-For", description: "for num in range ; open parenthesis ; 1 ; comma ; 3 ; close parenthesis ; tab ; print ; open quote ; value of num is ; close quote ; comma ; num ;; this code logs ; value of num is 1 ; value of num is 2 ;value of num is 3.")
+        
+        
+        
+        stWHILE = Statement(name: "While", image: "Python-While", description: "count equals 0 ; while ; open parenthesis ; count is smaller than 4 ; close parenthesis ; colon ; tab ; print ; open quote ; value of count is ; close quote ; comma ; count ;  tab ; count = count ;+; 1 ; this code logs ; value of count is 1 ; value of count is 2 ; value of count is 3.")
+        
+        
+    
+        stVARIABLE = Statement(name:"Create variable", image:"Python-Create Variable", description: "creating a string ; name = ; open quote ; John ; close quote ; creating an integer ; age = ; 22 ; creating a float ; height = ; 1 dot 82.")
+        
+    var stLIST = Statement(name:"Create a simple list", image:"Python-Create A Simple List", description: "emptyList ; equals; open brackets ; close brackets ; animals ; equals ; open brackets ; open quote ; cat ; close quote ; comma ; open quote ; dog ; close quote ; comma ; open quote ; lion ; close quote ; comma ; open quote ; parrot ; close quote ; comma ; open quote ; cat ; close quote ; close brackets, primeNumbers ; equals ; open brackets ; 2 ; comma ; 3 ; comma ; 5 ; comma ; 7 ; comma ; 11 ; comma ; close brackets.")
+        
+    var stFUNCTION = Statement(name:"Create a simple function", image:"Python-Create A Simple Function", description: "def ; sum ; open parenthesis ; a ; comma ; b ; close parenthesis ; tab ; return ; a ; plus ; B.")
+        
+        
+        
+        
+        
+        statements = [stIF, stFOR, stWHILE, stVARIABLE, stLIST, stFUNCTION]
+        lang = Language(name: "Python", statementArray: statements)
+        self.languages.append(lang)
         
         
     }

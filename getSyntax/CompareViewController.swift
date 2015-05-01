@@ -155,7 +155,7 @@ class CompareViewController: UIViewController,UIPickerViewDataSource, UIPickerVi
         if (segue.identifier == "compareSegue") {
             // pass data to next view
             
-            let viewController:ShowCompareViewController = segue.destinationViewController as ShowCompareViewController
+            let viewController:ShowCompareViewController = segue.destinationViewController as! ShowCompareViewController
             
             
             //gets the name of the first language
