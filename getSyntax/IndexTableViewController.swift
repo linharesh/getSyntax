@@ -43,6 +43,7 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
         
         var language:String!
         
+        
         if tableView == self.searchDisplayController!.searchResultsTableView {
             language = filteredLanguages[indexPath.row]
         } else {
@@ -70,6 +71,8 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
+    
+        
         //Se o search está ativado
         if tableView == self.searchDisplayController!.searchResultsTableView {
              self.selectedLanguage = self.filteredLanguages[indexPath.row]
@@ -114,12 +117,12 @@ class IndexTableViewController: UITableViewController, UISearchBarDelegate, UISe
     All the functions below are responsable for managing the search bar
     */
     
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
         self.filterContentForSearchText(searchString)
         return true
     }
     
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
         self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
         return true
     }
