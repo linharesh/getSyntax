@@ -20,9 +20,9 @@ class ShowCompareViewController: UIViewController {
     @IBOutlet weak var secondImage: UIImageView!
     
     
-    @IBOutlet weak var firstTextView: UITextView!
+    @IBOutlet weak var firstLanguageNameLabel: UILabel!
     
-    @IBOutlet weak var secondTextView: UITextView!
+    @IBOutlet weak var secondLanguageNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +30,9 @@ class ShowCompareViewController: UIViewController {
         // Do any additional setup after loading the view.\
         
         
-        self.firstTextView.text = self.firstLanguage.name
+        self.firstLanguageNameLabel.text = self.firstLanguage.name
         
-        self.secondTextView.text = self.secondLanguage.name
+        self.secondLanguageNameLabel.text = self.secondLanguage.name
         
         
         var firstStatement = self.firstLanguage.findStatementByName(self.StatementName)
